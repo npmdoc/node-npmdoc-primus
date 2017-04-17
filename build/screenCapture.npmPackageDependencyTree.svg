@@ -1,33 +1,36 @@
-<svg height="478" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="478" fill="#555" width="720"></rect>
+<svg height="526" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="526" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ primus@7.0.0 </tspan>
-<tspan x="10" y="42">  ├─┬ access-control@1.0.0 </tspan>
-<tspan x="10" y="58">  │ ├── millisecond@0.1.2 </tspan>
-<tspan x="10" y="74">  │ └── vary@1.1.1 </tspan>
-<tspan x="10" y="90">  ├── asyncemit@3.0.1 </tspan>
-<tspan x="10" y="106">  ├─┬ create-server@1.0.1 </tspan>
-<tspan x="10" y="122">  │ └── connected@0.0.2 </tspan>
-<tspan x="10" y="138">  ├─┬ diagnostics@1.1.0 </tspan>
-<tspan x="10" y="154">  │ ├─┬ colorspace@1.0.1 </tspan>
-<tspan x="10" y="170">  │ │ ├─┬ color@0.8.0 </tspan>
-<tspan x="10" y="186">  │ │ │ ├── color-convert@0.5.3 </tspan>
-<tspan x="10" y="202">  │ │ │ └─┬ color-string@0.3.0 </tspan>
-<tspan x="10" y="218">  │ │ │   └── color-name@1.1.2 </tspan>
-<tspan x="10" y="234">  │ │ └── text-hex@0.0.0 </tspan>
-<tspan x="10" y="250">  │ ├─┬ enabled@1.0.2 </tspan>
-<tspan x="10" y="266">  │ │ └── env-variable@0.0.3 </tspan>
-<tspan x="10" y="282">  │ └─┬ kuler@0.0.0 </tspan>
-<tspan x="10" y="298">  │   └── colornames@0.0.2 </tspan>
-<tspan x="10" y="314">  ├── eventemitter3@2.0.3 </tspan>
-<tspan x="10" y="330">  ├── forwarded-for@1.0.1 </tspan>
-<tspan x="10" y="346">  ├─┬ fusing@1.0.0 </tspan>
-<tspan x="10" y="362">  │ ├── emits@3.0.0 </tspan>
-<tspan x="10" y="378">  │ └─┬ predefine@0.1.2 </tspan>
-<tspan x="10" y="394">  │   └── extendible@0.1.1 </tspan>
-<tspan x="10" y="410">  ├─┬ setheader@0.0.4 </tspan>
-<tspan x="10" y="426">  │ └── debug@0.7.4 </tspan>
-<tspan x="10" y="442">  ├── ultron@1.1.0 </tspan>
-<tspan x="10" y="458">  └── yeast@0.1.2</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ primus@7.0.0 </tspan>
+<tspan x="10" y="90">  ├─┬ access-control@1.0.0 </tspan>
+<tspan x="10" y="106">  │ ├── millisecond@0.1.2 </tspan>
+<tspan x="10" y="122">  │ └── vary@1.1.1 </tspan>
+<tspan x="10" y="138">  ├── asyncemit@3.0.1 </tspan>
+<tspan x="10" y="154">  ├─┬ create-server@1.0.1 </tspan>
+<tspan x="10" y="170">  │ └── connected@0.0.2 </tspan>
+<tspan x="10" y="186">  ├─┬ diagnostics@1.1.0 </tspan>
+<tspan x="10" y="202">  │ ├─┬ colorspace@1.0.1 </tspan>
+<tspan x="10" y="218">  │ │ ├─┬ color@0.8.0 </tspan>
+<tspan x="10" y="234">  │ │ │ ├── color-convert@0.5.3 </tspan>
+<tspan x="10" y="250">  │ │ │ └─┬ color-string@0.3.0 </tspan>
+<tspan x="10" y="266">  │ │ │   └── color-name@1.1.2 </tspan>
+<tspan x="10" y="282">  │ │ └── text-hex@0.0.0 </tspan>
+<tspan x="10" y="298">  │ ├─┬ enabled@1.0.2 </tspan>
+<tspan x="10" y="314">  │ │ └── env-variable@0.0.3 </tspan>
+<tspan x="10" y="330">  │ └─┬ kuler@0.0.0 </tspan>
+<tspan x="10" y="346">  │   └── colornames@0.0.2 </tspan>
+<tspan x="10" y="362">  ├── eventemitter3@2.0.3 </tspan>
+<tspan x="10" y="378">  ├── forwarded-for@1.0.1 </tspan>
+<tspan x="10" y="394">  ├─┬ fusing@1.0.0 </tspan>
+<tspan x="10" y="410">  │ ├── emits@3.0.0 </tspan>
+<tspan x="10" y="426">  │ └─┬ predefine@0.1.2 </tspan>
+<tspan x="10" y="442">  │   └── extendible@0.1.1 </tspan>
+<tspan x="10" y="458">  ├─┬ setheader@0.0.4 </tspan>
+<tspan x="10" y="474">  │ └── debug@0.7.4 </tspan>
+<tspan x="10" y="490">  ├── ultron@1.1.0 </tspan>
+<tspan x="10" y="506">  └── yeast@0.1.2</tspan>
 </text>
 </svg>

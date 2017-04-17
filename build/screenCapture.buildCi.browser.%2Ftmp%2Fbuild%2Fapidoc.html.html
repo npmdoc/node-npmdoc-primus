@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://primus.io"
-
-    >primus (v7.0.0)</a>
+    <a href="http://primus.io">primus (v7.0.0)</a>
 </h1>
 <h4>Primus is a simple abstraction around real-time frameworks. It allows you to easily switch between different frameworks without any code changes.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.primus">module primus</a><ol>
 
@@ -1115,7 +1108,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function configure() {
-  var primusjs = this.pathname +&#x27;/primus.js&#x27;
+  var primusjs = this.pathname +'/primus.js'
     , primus = this
     , library
     , length;
@@ -1139,15 +1132,15 @@
     length = length || library.length;
 
     res.statusCode = 200;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;text/javascript; charset=utf-8&#x27;);
-    res.setHeader(&#x27;Content-Length&#x27;, length);
+    res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+    res.setHeader('Content-Length', length);
     res.end(library);
 
     return true;
   }
 
   //
-  // We don&#x27;t serve our client-side library over HTTP upgrades.
+  // We don't serve our client-side library over HTTP upgrades.
   //
   client.upgrade = false;
 
@@ -1175,24 +1168,24 @@
   id = id || yeast();
   headers = headers || {};
   address = address || {};
-  request = request || headers[&#x27;primus::req::backup&#x27;];
+  request = request || headers['primus::req::backup'];
 
-  writable(&#x27;id&#x27;, id);                   // Unique id for socket.
-  writable(&#x27;primus&#x27;, primus);           // References to Primus.
-  writable(&#x27;remote&#x27;, address);          // The remote address location.
-  writable(&#x27;headers&#x27;, headers);         // The request headers.
-  writable(&#x27;request&#x27;, request);         // Reference to an HTTP request.
-  writable(&#x27;writable&#x27;, true);           // Silly stream compatibility.
-  writable(&#x27;readable&#x27;, true);           // Silly stream compatibility.
-  writable(&#x27;queue&#x27;, []);                // Data queue for data events.
-  writable(&#x27;query&#x27;, query);             // The query string.
-  writable(&#x27;ultron&#x27;, new Ultron(this)); // Our event listening cleanup.
-  writable(&#x27;alive&#x27;, true);              // Flag used to detect zombie sparks.
+  writable('id', id);                   // Unique id for socket.
+  writable('primus', primus);           // References to Primus.
+  writable('remote', address);          // The remote address location.
+  writable('headers', headers);         // The request headers.
+  writable('request', request);         // Reference to an HTTP request.
+  writable('writable', true);           // Silly stream compatibility.
+  writable('readable', true);           // Silly stream compatibility.
+  writable('queue', []);                // Data queue for data events.
+  writable('query', query);             // The query string.
+  writable('ultron', new Ultron(this)); // Our event listening cleanup.
+  writable('alive', true);              // Flag used to detect zombie sparks.
 
   //
   // Parse our query string.
   //
-  if (&#x27;string&#x27; === typeof this.query) {
+  if ('string' === typeof this.query) {
     this.query = parse(this.query);
   }
 
@@ -1240,9 +1233,9 @@
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -1253,7 +1246,7 @@
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -1305,9 +1298,9 @@
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -1318,7 +1311,7 @@
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -1391,9 +1384,9 @@
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -1404,7 +1397,7 @@
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -1456,9 +1449,9 @@
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -1469,7 +1462,7 @@
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -1496,7 +1489,7 @@
   var control = access(this.options);
 
   //
-  // We don&#x27;t add Access-Control headers for HTTP upgrades.
+  // We don't add Access-Control headers for HTTP upgrades.
   //
   control.upgrade = false;
 
@@ -1524,7 +1517,7 @@
    * @api private
    */
 </span>  return function client(req, res, next) {
-    if (&#x27;function&#x27; !== typeof this.auth) return next();
+    if ('function' !== typeof this.auth) return next();
 
     this.auth(req, function authorized(err) {
       if (!err) return next();
@@ -1539,26 +1532,26 @@
       //
       if (res.setHeader) {
         res.statusCode = code;
-        res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
-        res.setHeader(&#x27;Content-Length&#x27;, length);
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Content-Length', length);
 
-        if (code === 401 &#x26;&#x26; err.authenticate) {
-          res.setHeader(&#x27;WWW-Authenticate&#x27;, err.authenticate);
+        if (code === 401 &amp;&amp; err.authenticate) {
+          res.setHeader('WWW-Authenticate', err.authenticate);
         }
 
         res.end(message);
       } else {
-        res.write(&#x27;HTTP/&#x27;+ req.httpVersion +&#x27; &#x27;);
-        res.write(code +&#x27; &#x27;+ require(&#x27;http&#x27;).STATUS_CODES[code] +&#x27;\r\n&#x27;);
-        res.write(&#x27;Connection: close\r\n&#x27;);
-        res.write(&#x27;Content-Type: application/json\r\n&#x27;);
-        res.write(&#x27;Content-Length: &#x27;+ length +&#x27;\r\n&#x27;);
+        res.write('HTTP/'+ req.httpVersion +' ');
+        res.write(code +' '+ require('http').STATUS_CODES[code] +'\r\n');
+        res.write('Connection: close\r\n');
+        res.write('Content-Type: application/json\r\n');
+        res.write('Content-Length: '+ length +'\r\n');
 
-        if (code === 401 &#x26;&#x26; err.authenticate) {
-          res.write(&#x27;WWW-Authenticate: &#x27; + err.authenticate + &#x27;\r\n&#x27;);
+        if (code === 401 &amp;&amp; err.authenticate) {
+          res.write('WWW-Authenticate: ' + err.authenticate + '\r\n');
         }
 
-        res.write(&#x27;\r\n&#x27;);
+        res.write('\r\n');
         res.write(message);
         res.destroy();
       }
@@ -1578,44 +1571,44 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function createServer(fn, options) {
-  if (&#x27;object&#x27; === typeof fn) {
+  if ('object' === typeof fn) {
     options = fn;
     fn = null;
   }
 
   options = options || {};
 
-  var server = require(&#x27;create-server&#x27;)(Primus.prototype.merge.call(Primus, {
+  var server = require('create-server')(Primus.prototype.merge.call(Primus, {
     http: function warn() {
       if (!options.iknowhttpsisbetter) [
-        &#x27;&#x27;,
-        &#x27;We\&#x27;ve detected that you\&#x27;re using a HTTP instead of a HTTPS server.&#x27;,
-        &#x27;Please be aware that real-time connections have less chance of being blocked&#x27;,
-        &#x27;by firewalls and anti-virus scanners if they are encrypted (using SSL). If&#x27;,
-        &#x27;you run your server behind a reverse and HTTPS terminating proxy ignore&#x27;,
-        &#x27;this message, if not, you\&#x27;ve been warned.&#x27;,
-        &#x27;&#x27;
+        '',
+        'We\'ve detected that you\'re using a HTTP instead of a HTTPS server.',
+        'Please be aware that real-time connections have less chance of being blocked',
+        'by firewalls and anti-virus scanners if they are encrypted (using SSL). If',
+        'you run your server behind a reverse and HTTPS terminating proxy ignore',
+        'this message, if not, you\'ve been warned.',
+        ''
       ].forEach(function each(line) {
-        console.log(&#x27;primus: &#x27;+ line);
+        console.log('primus: '+ line);
       });
     }
   }, options));
 
   //
-  // Now that we&#x27;ve got a server, we can setup the Primus and start listening.
+  // Now that we've got a server, we can setup the Primus and start listening.
   //
   var application = new Primus(server, options);
 
-  if (fn) application.on(&#x27;connection&#x27;, fn);
+  if (fn) application.on('connection', fn);
   return application;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ```js
-&#x27;use strict&#x27;;
+'use strict';
 
-var Primus = require(&#x27;primus&#x27;)
-  , http = require(&#x27;http&#x27;);
+var Primus = require('primus')
+  , http = require('http');
 
 var server = http.<span class="apidocCodeKeywordSpan">createServer</span>(/* request handler */)
   , primus = new Primus(server, {/* options */});
@@ -1644,7 +1637,7 @@ authorization       | Authorization handler                     | `null`
   return primus.Socket;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-2. You might need to connect from a different node process where you don&#x27;t have
+2. You might need to connect from a different node process where you don't have
    access to your `primus` instance and the compatible `Socket` instance. For
    these cases there a special `createSocket` method where you can specify the
    `transformer`, `parser`, `plugin` that you are using on your server to create
@@ -1652,12 +1645,12 @@ authorization       | Authorization handler                     | `null`
 
    ```js
    var Socket = Primus.<span class="apidocCodeKeywordSpan">createSocket</span>({ transformer: transformer, parser: parser })
-     , client = new Socket(&#x27;http://localhost:8080&#x27;);
+     , client = new Socket('http://localhost:8080');
    ```
 
 When you are using plugins with Primus make sure you add them **before** you
 reference the `primus.Socket` or it will compile a client without your plugins.
-If you&#x27;re using the `Primus.createSocket` api you can directly supply the
+If you're using the `Primus.createSocket` api you can directly supply the
 plugins as part of the options as it supports `plugin` object:
 ...</pre></li>
     </ul>
@@ -1682,37 +1675,37 @@ plugins as part of the options as it supports `plugin` object:
   //
   if (res.setHeader) {
     res.statusCode = code;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
-    res.setHeader(&#x27;Content-Length&#x27;, length);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Length', length);
 
     return res.end(message);
   }
 
-  res.write(&#x27;HTTP/&#x27;+ req.httpVersion +&#x27; &#x27;);
-  res.write(code +&#x27; &#x27;+ require(&#x27;http&#x27;).STATUS_CODES[code] +&#x27;\r\n&#x27;);
-  res.write(&#x27;Connection: close\r\n&#x27;);
-  res.write(&#x27;Content-Type: application/json\r\n&#x27;);
-  res.write(&#x27;Content-Length: &#x27;+ length +&#x27;\r\n&#x27;);
-  res.write(&#x27;\r\n&#x27;);
+  res.write('HTTP/'+ req.httpVersion +' ');
+  res.write(code +' '+ require('http').STATUS_CODES[code] +'\r\n');
+  res.write('Connection: close\r\n');
+  res.write('Content-Type: application/json\r\n');
+  res.write('Content-Length: '+ length +'\r\n');
+  res.write('\r\n');
   res.write(message);
   res.destroy();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 closed for some other reason. The only exception is when there is an
 authorization hook. If we get an error when connecting to a server where
-authorization is required, we simply close the connection, as we can&#x27;t
+authorization is required, we simply close the connection, as we can't
 determinate if the error is the result of an unauthorized access or not.
 
 ```js
-primus.on(&#x27;error&#x27;, function error(err) {
-  console.<span class="apidocCodeKeywordSpan">error</span>(&#x27;Something horrible has happened&#x27;, err.stack);
+primus.on('error', function error(err) {
+  console.<span class="apidocCodeKeywordSpan">error</span>('Something horrible has happened', err.stack);
 });
 ```
 
-#### primus.on(&#x27;reconnect&#x27;)
+#### primus.on('reconnect')
 
-The `reconnect` event is emitted when we&#x27;re attempting to reconnect to the
-server. This all happens transparently and it&#x27;s just a way for you to know when
+The `reconnect` event is emitted when we're attempting to reconnect to the
+server. This all happens transparently and it's just a way for you to know when
 ...</pre></li>
     </ul>
 
@@ -1731,10 +1724,10 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
 
   //
   // The constructor function for the new subclass is either defined by you
-  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
-  // by us to simply call the parent&#x27;s constructor.
+  // (the "constructor" property in your `extend` definition), or defaulted
+  // by us to simply call the parent's constructor.
   //
-  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+  if (protoProps &amp;&amp; has.call(protoProps, 'constructor')) {
     child = protoProps.constructor;
   } else {
     child = mode(parent);
@@ -1742,7 +1735,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
 
   //
   // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`&#x27;s constructor function.
+  // `parent`'s constructor function.
   //
   function Surrogate() {
     this.constructor = child;
@@ -1763,7 +1756,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   copypaste(child, parent, staticProps);
 
   //
-  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  // Set a convenience property in case the parent's prototype is needed later.
   //
   child.__super__ = parent.prototype;
 
@@ -1822,8 +1815,8 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function nocache(req, res) {
-  setHeader(res, &#x27;Cache-Control&#x27;, &#x27;no-store, no-cache, must-revalidate, max-age=0&#x27;);
-  setHeader(res, &#x27;Pragma&#x27;, &#x27;no-cache&#x27;);
+  setHeader(res, 'Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+  setHeader(res, 'Pragma', 'no-cache');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1847,9 +1840,9 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     //
     if (
          !predefine.descriptor(description)
-      || is(description, &#x27;object&#x27;)
-         &#x26;&#x26; !clean
-         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+      || is(description, 'object')
+         &amp;&amp; !clean
+         &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
     ) { description = {
         value: description
       };
@@ -1860,7 +1853,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     // property
     //
     var described = Object.getOwnPropertyDescriptor(obj, method);
-    if (described &#x26;&#x26; !described.configurable) {
+    if (described &amp;&amp; !described.configurable) {
       return predefined;
     }
 
@@ -1910,7 +1903,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function descriptor(obj) {
-  if (!obj || &#x27;object&#x27; !== typeof obj || Array.isArray(obj)) return false;
+  if (!obj || 'object' !== typeof obj || Array.isArray(obj)) return false;
 
   var keys = Object.keys(obj);
 
@@ -1931,15 +1924,15 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   // - (optional) set
   //
   if (
-       (&#x27;value&#x27; in obj || &#x27;writable&#x27; in obj)
-    &#x26;&#x26; (&#x27;function&#x27; === typeof obj.set || &#x27;function&#x27; === typeof obj.get)
+       ('value' in obj || 'writable' in obj)
+    &amp;&amp; ('function' === typeof obj.set || 'function' === typeof obj.get)
   ) return false;
 
-  return !!keys.length &#x26;&#x26; keys.every(function allowed(key) {
+  return !!keys.length &amp;&amp; keys.every(function allowed(key) {
     var type = description[key]
       , valid = type === undefined || is(obj[key], type);
 
-    return key in description &#x26;&#x26; valid;
+    return key in description &amp;&amp; valid;
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1967,7 +1960,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
 
   if (context) {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.apply(collection[ i ], context);
         if (value === false) break;
       }
@@ -1979,7 +1972,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     }
   } else {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.call(collection[i], i, collection[i]);
         if (value === false) break;
       }
@@ -2044,7 +2037,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
         result.push(additional[index]);
       }
     });
-  } else if (&#x27;object&#x27; === typeof target) {
+  } else if ('object' === typeof target) {
     each(additional, function objectForEach(key, value) {
       if (target[key] === undefined) {
         result[key] = value;
@@ -2096,7 +2089,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   keep = keep || [];
 
   for (var prop in obj) {
-    if (has.call(obj, prop) &#x26;&#x26; !~keep.indexOf(prop)) {
+    if (has.call(obj, prop) &amp;&amp; !~keep.indexOf(prop)) {
       delete obj[prop];
     }
   }
@@ -2122,9 +2115,9 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2135,7 +2128,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2154,10 +2147,10 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -2197,7 +2190,7 @@ return {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function configure() {
-  var specification = this.pathname +&#x27;/spec&#x27;
+  var specification = this.pathname +'/spec'
     , primus = this;
 
 <span class="apidocCodeCommentSpan">  /**
@@ -2211,14 +2204,14 @@ return {
     if (req.uri.pathname !== specification) return;
 
     res.statusCode = 200;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(primus.spec));
 
     return true;
   }
 
   //
-  // Don&#x27;t run a specification test for HTTP upgrades.
+  // Don't run a specification test for HTTP upgrades.
   //
   spec.upgrade = false;
 
@@ -2240,20 +2233,20 @@ return {
     return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  &#x27;&#x27;
-].join(&#x27;\n&#x27;);
+  ''
+].join('\n');
 
 //
 // Replace some basic content.
 //
 client = client
-  .replace(&#x27;null; // @import {primus::pathname}&#x27;, &#x27;&#x22;&#x27;+ this.pathname.<span class="apidocCodeKeywordSpan
-">toString</span>() +&#x27;&#x22;&#x27;)
-  .replace(&#x27;null; // @import {primus::version}&#x27;, &#x27;&#x22;&#x27;+ this.version +&#x27;&#x22;&#x27;)
-  .replace(&#x27;null; // @import {primus::client}&#x27;, this.transformer.client.toString())
-  .replace(&#x27;null; // @import {primus::auth}&#x27;, (!!this.auth).toString())
-  .replace(&#x27;null; // @import {primus::encoder}&#x27;, this.encoder.toString())
-  .replace(&#x27;null; // @import {primus::decoder}&#x27;, this.decoder.toString());
+  .replace('null; // @import {primus::pathname}', '"'+ this.pathname.<span class="apidocCodeKeywordSpan
+">toString</span>() +'"')
+  .replace('null; // @import {primus::version}', '"'+ this.version +'"')
+  .replace('null; // @import {primus::client}', this.transformer.client.toString())
+  .replace('null; // @import {primus::auth}', (!!this.auth).toString())
+  .replace('null; // @import {primus::encoder}', this.encoder.toString())
+  .replace('null; // @import {primus::decoder}', this.decoder.toString());
 
 //
 ...</pre></li>
@@ -2275,9 +2268,9 @@ client = client
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2288,7 +2281,7 @@ client = client
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2312,10 +2305,10 @@ client = client
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function xss(req, res) {
-  var agent = (req.headers[&#x27;user-agent&#x27;] || &#x27;&#x27;).toLowerCase();
+  var agent = (req.headers['user-agent'] || '').toLowerCase();
 
-  if (agent &#x26;&#x26; (~agent.indexOf(&#x27;;msie&#x27;) || ~agent.indexOf(&#x27;trident/&#x27;))) {
-    setHeader(res, &#x27;X-XSS-Protection&#x27;, &#x27;0&#x27;);
+  if (agent &amp;&amp; (~agent.indexOf(';msie') || ~agent.indexOf('trident/'))) {
+    setHeader(res, 'X-XSS-Protection', '0');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2353,24 +2346,24 @@ client = client
   id = id || yeast();
   headers = headers || {};
   address = address || {};
-  request = request || headers[&#x27;primus::req::backup&#x27;];
+  request = request || headers['primus::req::backup'];
 
-  writable(&#x27;id&#x27;, id);                   // Unique id for socket.
-  writable(&#x27;primus&#x27;, primus);           // References to Primus.
-  writable(&#x27;remote&#x27;, address);          // The remote address location.
-  writable(&#x27;headers&#x27;, headers);         // The request headers.
-  writable(&#x27;request&#x27;, request);         // Reference to an HTTP request.
-  writable(&#x27;writable&#x27;, true);           // Silly stream compatibility.
-  writable(&#x27;readable&#x27;, true);           // Silly stream compatibility.
-  writable(&#x27;queue&#x27;, []);                // Data queue for data events.
-  writable(&#x27;query&#x27;, query);             // The query string.
-  writable(&#x27;ultron&#x27;, new Ultron(this)); // Our event listening cleanup.
-  writable(&#x27;alive&#x27;, true);              // Flag used to detect zombie sparks.
+  writable('id', id);                   // Unique id for socket.
+  writable('primus', primus);           // References to Primus.
+  writable('remote', address);          // The remote address location.
+  writable('headers', headers);         // The request headers.
+  writable('request', request);         // Reference to an HTTP request.
+  writable('writable', true);           // Silly stream compatibility.
+  writable('readable', true);           // Silly stream compatibility.
+  writable('queue', []);                // Data queue for data events.
+  writable('query', query);             // The query string.
+  writable('ultron', new Ultron(this)); // Our event listening cleanup.
+  writable('alive', true);              // Flag used to detect zombie sparks.
 
   //
   // Parse our query string.
   //
-  if (&#x27;string&#x27; === typeof this.query) {
+  if ('string' === typeof this.query) {
     this.query = parse(this.query);
   }
 
@@ -2396,10 +2389,10 @@ client = client
 
   //
   // The constructor function for the new subclass is either defined by you
-  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
-  // by us to simply call the parent&#x27;s constructor.
+  // (the "constructor" property in your `extend` definition), or defaulted
+  // by us to simply call the parent's constructor.
   //
-  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+  if (protoProps &amp;&amp; has.call(protoProps, 'constructor')) {
     child = protoProps.constructor;
   } else {
     child = mode(parent);
@@ -2407,7 +2400,7 @@ client = client
 
   //
   // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`&#x27;s constructor function.
+  // `parent`'s constructor function.
   //
   function Surrogate() {
     this.constructor = child;
@@ -2428,7 +2421,7 @@ client = client
   copypaste(child, parent, staticProps);
 
   //
-  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  // Set a convenience property in case the parent's prototype is needed later.
   //
   child.__super__ = parent.prototype;
 
@@ -2477,9 +2470,9 @@ client = client
     //
     if (
          !predefine.descriptor(description)
-      || is(description, &#x27;object&#x27;)
-         &#x26;&#x26; !clean
-         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+      || is(description, 'object')
+         &amp;&amp; !clean
+         &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
     ) { description = {
         value: description
       };
@@ -2490,7 +2483,7 @@ client = client
     // property
     //
     var described = Object.getOwnPropertyDescriptor(obj, method);
-    if (described &#x26;&#x26; !described.configurable) {
+    if (described &amp;&amp; !described.configurable) {
       return predefined;
     }
 
@@ -2521,9 +2514,9 @@ client = client
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2534,7 +2527,7 @@ client = client
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2553,10 +2546,10 @@ client = client
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -2602,9 +2595,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2615,7 +2608,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2682,9 +2675,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2695,7 +2688,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2714,10 +2707,10 @@ return {
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -2773,9 +2766,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2786,7 +2779,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2842,10 +2835,10 @@ return {
 
   //
   // The constructor function for the new subclass is either defined by you
-  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
-  // by us to simply call the parent&#x27;s constructor.
+  // (the "constructor" property in your `extend` definition), or defaulted
+  // by us to simply call the parent's constructor.
   //
-  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+  if (protoProps &amp;&amp; has.call(protoProps, 'constructor')) {
     child = protoProps.constructor;
   } else {
     child = mode(parent);
@@ -2853,7 +2846,7 @@ return {
 
   //
   // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`&#x27;s constructor function.
+  // `parent`'s constructor function.
   //
   function Surrogate() {
     this.constructor = child;
@@ -2874,7 +2867,7 @@ return {
   copypaste(child, parent, staticProps);
 
   //
-  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  // Set a convenience property in case the parent's prototype is needed later.
   //
   child.__super__ = parent.prototype;
 
@@ -2923,9 +2916,9 @@ return {
     //
     if (
          !predefine.descriptor(description)
-      || is(description, &#x27;object&#x27;)
-         &#x26;&#x26; !clean
-         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+      || is(description, 'object')
+         &amp;&amp; !clean
+         &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
     ) { description = {
         value: description
       };
@@ -2936,7 +2929,7 @@ return {
     // property
     //
     var described = Object.getOwnPropertyDescriptor(obj, method);
-    if (described &#x26;&#x26; !described.configurable) {
+    if (described &amp;&amp; !described.configurable) {
       return predefined;
     }
 
@@ -2967,9 +2960,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -2980,7 +2973,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -2999,10 +2992,10 @@ return {
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -3048,9 +3041,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -3061,7 +3054,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -3122,9 +3115,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -3135,7 +3128,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -3154,10 +3147,10 @@ return {
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -3213,9 +3206,9 @@ return {
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -3226,7 +3219,7 @@ return {
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -3258,7 +3251,7 @@ return {
   var control = access(this.options);
 
   //
-  // We don&#x27;t add Access-Control headers for HTTP upgrades.
+  // We don't add Access-Control headers for HTTP upgrades.
   //
   control.upgrade = false;
 
@@ -3291,7 +3284,7 @@ return {
    * @api private
    */
 </span>  return function client(req, res, next) {
-    if (&#x27;function&#x27; !== typeof this.auth) return next();
+    if ('function' !== typeof this.auth) return next();
 
     this.auth(req, function authorized(err) {
       if (!err) return next();
@@ -3306,26 +3299,26 @@ return {
       //
       if (res.setHeader) {
         res.statusCode = code;
-        res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
-        res.setHeader(&#x27;Content-Length&#x27;, length);
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Content-Length', length);
 
-        if (code === 401 &#x26;&#x26; err.authenticate) {
-          res.setHeader(&#x27;WWW-Authenticate&#x27;, err.authenticate);
+        if (code === 401 &amp;&amp; err.authenticate) {
+          res.setHeader('WWW-Authenticate', err.authenticate);
         }
 
         res.end(message);
       } else {
-        res.write(&#x27;HTTP/&#x27;+ req.httpVersion +&#x27; &#x27;);
-        res.write(code +&#x27; &#x27;+ require(&#x27;http&#x27;).STATUS_CODES[code] +&#x27;\r\n&#x27;);
-        res.write(&#x27;Connection: close\r\n&#x27;);
-        res.write(&#x27;Content-Type: application/json\r\n&#x27;);
-        res.write(&#x27;Content-Length: &#x27;+ length +&#x27;\r\n&#x27;);
+        res.write('HTTP/'+ req.httpVersion +' ');
+        res.write(code +' '+ require('http').STATUS_CODES[code] +'\r\n');
+        res.write('Connection: close\r\n');
+        res.write('Content-Type: application/json\r\n');
+        res.write('Content-Length: '+ length +'\r\n');
 
-        if (code === 401 &#x26;&#x26; err.authenticate) {
-          res.write(&#x27;WWW-Authenticate: &#x27; + err.authenticate + &#x27;\r\n&#x27;);
+        if (code === 401 &amp;&amp; err.authenticate) {
+          res.write('WWW-Authenticate: ' + err.authenticate + '\r\n');
         }
 
-        res.write(&#x27;\r\n&#x27;);
+        res.write('\r\n');
         res.write(message);
         res.destroy();
       }
@@ -3350,44 +3343,44 @@ return {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function createServer(fn, options) {
-  if (&#x27;object&#x27; === typeof fn) {
+  if ('object' === typeof fn) {
     options = fn;
     fn = null;
   }
 
   options = options || {};
 
-  var server = require(&#x27;create-server&#x27;)(Primus.prototype.merge.call(Primus, {
+  var server = require('create-server')(Primus.prototype.merge.call(Primus, {
     http: function warn() {
       if (!options.iknowhttpsisbetter) [
-        &#x27;&#x27;,
-        &#x27;We\&#x27;ve detected that you\&#x27;re using a HTTP instead of a HTTPS server.&#x27;,
-        &#x27;Please be aware that real-time connections have less chance of being blocked&#x27;,
-        &#x27;by firewalls and anti-virus scanners if they are encrypted (using SSL). If&#x27;,
-        &#x27;you run your server behind a reverse and HTTPS terminating proxy ignore&#x27;,
-        &#x27;this message, if not, you\&#x27;ve been warned.&#x27;,
-        &#x27;&#x27;
+        '',
+        'We\'ve detected that you\'re using a HTTP instead of a HTTPS server.',
+        'Please be aware that real-time connections have less chance of being blocked',
+        'by firewalls and anti-virus scanners if they are encrypted (using SSL). If',
+        'you run your server behind a reverse and HTTPS terminating proxy ignore',
+        'this message, if not, you\'ve been warned.',
+        ''
       ].forEach(function each(line) {
-        console.log(&#x27;primus: &#x27;+ line);
+        console.log('primus: '+ line);
       });
     }
   }, options));
 
   //
-  // Now that we&#x27;ve got a server, we can setup the Primus and start listening.
+  // Now that we've got a server, we can setup the Primus and start listening.
   //
   var application = new Primus(server, options);
 
-  if (fn) application.on(&#x27;connection&#x27;, fn);
+  if (fn) application.on('connection', fn);
   return application;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ```js
-&#x27;use strict&#x27;;
+'use strict';
 
-var Primus = require(&#x27;primus&#x27;)
-  , http = require(&#x27;http&#x27;);
+var Primus = require('primus')
+  , http = require('http');
 
 var server = http.<span class="apidocCodeKeywordSpan">createServer</span>(/* request handler */)
   , primus = new Primus(server, {/* options */});
@@ -3421,7 +3414,7 @@ authorization       | Authorization handler                     | `null`
   return primus.Socket;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-2. You might need to connect from a different node process where you don&#x27;t have
+2. You might need to connect from a different node process where you don't have
    access to your `primus` instance and the compatible `Socket` instance. For
    these cases there a special `createSocket` method where you can specify the
    `transformer`, `parser`, `plugin` that you are using on your server to create
@@ -3429,12 +3422,12 @@ authorization       | Authorization handler                     | `null`
 
    ```js
    var Socket = Primus.<span class="apidocCodeKeywordSpan">createSocket</span>({ transformer: transformer, parser: parser })
-     , client = new Socket(&#x27;http://localhost:8080&#x27;);
+     , client = new Socket('http://localhost:8080');
    ```
 
 When you are using plugins with Primus make sure you add them **before** you
 reference the `primus.Socket` or it will compile a client without your plugins.
-If you&#x27;re using the `Primus.createSocket` api you can directly supply the
+If you're using the `Primus.createSocket` api you can directly supply the
 plugins as part of the options as it supports `plugin` object:
 ...</pre></li>
     </ul>
@@ -3464,37 +3457,37 @@ plugins as part of the options as it supports `plugin` object:
   //
   if (res.setHeader) {
     res.statusCode = code;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
-    res.setHeader(&#x27;Content-Length&#x27;, length);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Length', length);
 
     return res.end(message);
   }
 
-  res.write(&#x27;HTTP/&#x27;+ req.httpVersion +&#x27; &#x27;);
-  res.write(code +&#x27; &#x27;+ require(&#x27;http&#x27;).STATUS_CODES[code] +&#x27;\r\n&#x27;);
-  res.write(&#x27;Connection: close\r\n&#x27;);
-  res.write(&#x27;Content-Type: application/json\r\n&#x27;);
-  res.write(&#x27;Content-Length: &#x27;+ length +&#x27;\r\n&#x27;);
-  res.write(&#x27;\r\n&#x27;);
+  res.write('HTTP/'+ req.httpVersion +' ');
+  res.write(code +' '+ require('http').STATUS_CODES[code] +'\r\n');
+  res.write('Connection: close\r\n');
+  res.write('Content-Type: application/json\r\n');
+  res.write('Content-Length: '+ length +'\r\n');
+  res.write('\r\n');
   res.write(message);
   res.destroy();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 closed for some other reason. The only exception is when there is an
 authorization hook. If we get an error when connecting to a server where
-authorization is required, we simply close the connection, as we can&#x27;t
+authorization is required, we simply close the connection, as we can't
 determinate if the error is the result of an unauthorized access or not.
 
 ```js
-primus.on(&#x27;error&#x27;, function error(err) {
-  console.<span class="apidocCodeKeywordSpan">error</span>(&#x27;Something horrible has happened&#x27;, err.stack);
+primus.on('error', function error(err) {
+  console.<span class="apidocCodeKeywordSpan">error</span>('Something horrible has happened', err.stack);
 });
 ```
 
-#### primus.on(&#x27;reconnect&#x27;)
+#### primus.on('reconnect')
 
-The `reconnect` event is emitted when we&#x27;re attempting to reconnect to the
-server. This all happens transparently and it&#x27;s just a way for you to know when
+The `reconnect` event is emitted when we're attempting to reconnect to the
+server. This all happens transparently and it's just a way for you to know when
 ...</pre></li>
     </ul>
 
@@ -3519,8 +3512,8 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   this.name = this.constructor.name;
 
   if (spark) {
-    if (spark.listeners(&#x27;error&#x27;).length) spark.emit(&#x27;error&#x27;, this);
-    spark.primus.emit(&#x27;log&#x27;, &#x27;error&#x27;, this);
+    if (spark.listeners('error').length) spark.emit('error', this);
+    spark.primus.emit('log', 'error', this);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3542,7 +3535,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   this.name = this.constructor.name;
 
   if (logger) {
-    logger.emit(&#x27;log&#x27;, &#x27;error&#x27;, this);
+    logger.emit('log', 'error', this);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3568,10 +3561,10 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
 
   //
   // The constructor function for the new subclass is either defined by you
-  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
-  // by us to simply call the parent&#x27;s constructor.
+  // (the "constructor" property in your `extend` definition), or defaulted
+  // by us to simply call the parent's constructor.
   //
-  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+  if (protoProps &amp;&amp; has.call(protoProps, 'constructor')) {
     child = protoProps.constructor;
   } else {
     child = mode(parent);
@@ -3579,7 +3572,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
 
   //
   // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`&#x27;s constructor function.
+  // `parent`'s constructor function.
   //
   function Surrogate() {
     this.constructor = child;
@@ -3600,7 +3593,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   copypaste(child, parent, staticProps);
 
   //
-  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  // Set a convenience property in case the parent's prototype is needed later.
   //
   child.__super__ = parent.prototype;
 
@@ -3676,7 +3669,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     <li>description and source-code<pre class="apidocCodePre">function decoder(data, fn) {
   var err;
 
-  if (&#x27;string&#x27; !== typeof data) return fn(err, data);
+  if ('string' !== typeof data) return fn(err, data);
 
   try { data = JSON.parse(data); }
   catch (e) { err = e; }
@@ -3723,8 +3716,8 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function nocache(req, res) {
-  setHeader(res, &#x27;Cache-Control&#x27;, &#x27;no-store, no-cache, must-revalidate, max-age=0&#x27;);
-  setHeader(res, &#x27;Pragma&#x27;, &#x27;no-cache&#x27;);
+  setHeader(res, 'Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+  setHeader(res, 'Pragma', 'no-cache');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3753,9 +3746,9 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     //
     if (
          !predefine.descriptor(description)
-      || is(description, &#x27;object&#x27;)
-         &#x26;&#x26; !clean
-         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+      || is(description, 'object')
+         &amp;&amp; !clean
+         &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
     ) { description = {
         value: description
       };
@@ -3766,7 +3759,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
     // property
     //
     var described = Object.getOwnPropertyDescriptor(obj, method);
-    if (described &#x26;&#x26; !described.configurable) {
+    if (described &amp;&amp; !described.configurable) {
       return predefined;
     }
 
@@ -3804,7 +3797,7 @@ server. This all happens transparently and it&#x27;s just a way for you to know 
   return definition;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  throw new PrimusError(&#x27;The `timeout` option has been removed&#x27;, this);
+  throw new PrimusError('The `timeout` option has been removed', this);
 }
 
 var primus = this
@@ -3816,8 +3809,8 @@ this.ark = Object.create(null);             // Plugin storage.
 this.layers = [];                           // Middleware layers.
 this.heartbeatInterval = null;              // The heartbeat interval.
 this.transformer = null;                    // Reference to the real-time engine instance.
-this.encoder = null;                        // Shorthand to the parser&#x27;s encoder.
-this.decoder = null;                        // Shorthand to the parser&#x27;s decoder.
+this.encoder = null;                        // Shorthand to the parser's encoder.
+this.decoder = null;                        // Shorthand to the parser's decoder.
 this.connected = 0;                         // Connection counter.
 ...</pre></li>
     </ul>
@@ -3832,7 +3825,7 @@ this.connected = 0;                         // Connection counter.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function descriptor(obj) {
-  if (!obj || &#x27;object&#x27; !== typeof obj || Array.isArray(obj)) return false;
+  if (!obj || 'object' !== typeof obj || Array.isArray(obj)) return false;
 
   var keys = Object.keys(obj);
 
@@ -3853,15 +3846,15 @@ this.connected = 0;                         // Connection counter.
   // - (optional) set
   //
   if (
-       (&#x27;value&#x27; in obj || &#x27;writable&#x27; in obj)
-    &#x26;&#x26; (&#x27;function&#x27; === typeof obj.set || &#x27;function&#x27; === typeof obj.get)
+       ('value' in obj || 'writable' in obj)
+    &amp;&amp; ('function' === typeof obj.set || 'function' === typeof obj.get)
   ) return false;
 
-  return !!keys.length &#x26;&#x26; keys.every(function allowed(key) {
+  return !!keys.length &amp;&amp; keys.every(function allowed(key) {
     var type = description[key]
       , valid = type === undefined || is(obj[key], type);
 
-    return key in description &#x26;&#x26; valid;
+    return key in description &amp;&amp; valid;
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3889,7 +3882,7 @@ this.connected = 0;                         // Connection counter.
 
   if (context) {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.apply(collection[ i ], context);
         if (value === false) break;
       }
@@ -3901,7 +3894,7 @@ this.connected = 0;                         // Connection counter.
     }
   } else {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.call(collection[i], i, collection[i]);
         if (value === false) break;
       }
@@ -3933,10 +3926,10 @@ this.connected = 0;                         // Connection counter.
 
   //
   // The constructor function for the new subclass is either defined by you
-  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
-  // by us to simply call the parent&#x27;s constructor.
+  // (the "constructor" property in your `extend` definition), or defaulted
+  // by us to simply call the parent's constructor.
   //
-  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+  if (protoProps &amp;&amp; has.call(protoProps, 'constructor')) {
     child = protoProps.constructor;
   } else {
     child = mode(parent);
@@ -3944,7 +3937,7 @@ this.connected = 0;                         // Connection counter.
 
   //
   // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`&#x27;s constructor function.
+  // `parent`'s constructor function.
   //
   function Surrogate() {
     this.constructor = child;
@@ -3965,7 +3958,7 @@ this.connected = 0;                         // Connection counter.
   copypaste(child, parent, staticProps);
 
   //
-  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  // Set a convenience property in case the parent's prototype is needed later.
   //
   child.__super__ = parent.prototype;
 
@@ -4022,7 +4015,7 @@ this.connected = 0;                         // Connection counter.
         result.push(additional[index]);
       }
     });
-  } else if (&#x27;object&#x27; === typeof target) {
+  } else if ('object' === typeof target) {
     each(additional, function objectForEach(key, value) {
       if (target[key] === undefined) {
         result[key] = value;
@@ -4074,7 +4067,7 @@ this.connected = 0;                         // Connection counter.
   keep = keep || [];
 
   for (var prop in obj) {
-    if (has.call(obj, prop) &#x26;&#x26; !~keep.indexOf(prop)) {
+    if (has.call(obj, prop) &amp;&amp; !~keep.indexOf(prop)) {
       delete obj[prop];
     }
   }
@@ -4084,7 +4077,7 @@ this.connected = 0;                         // Connection counter.
     <li>example usage<pre class="apidocCodePre">...
 ```js
 // add a middleware after the first two in the stack
-primus.use(&#x27;name&#x27;, function (req, res) {
+primus.use('name', function (req, res) {
 
 }, 2);
 ```
@@ -4132,7 +4125,7 @@ file you can simply:
   return definition;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  throw new PrimusError(&#x27;The `timeout` option has been removed&#x27;, this);
+  throw new PrimusError('The `timeout` option has been removed', this);
 }
 
 var primus = this
@@ -4144,8 +4137,8 @@ this.ark = Object.create(null);             // Plugin storage.
 this.layers = [];                           // Middleware layers.
 this.heartbeatInterval = null;              // The heartbeat interval.
 this.transformer = null;                    // Reference to the real-time engine instance.
-this.encoder = null;                        // Shorthand to the parser&#x27;s encoder.
-this.decoder = null;                        // Shorthand to the parser&#x27;s decoder.
+this.encoder = null;                        // Shorthand to the parser's encoder.
+this.decoder = null;                        // Shorthand to the parser's decoder.
 this.connected = 0;                         // Connection counter.
 ...</pre></li>
     </ul>
@@ -4165,7 +4158,7 @@ this.connected = 0;                         // Connection counter.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function descriptor(obj) {
-  if (!obj || &#x27;object&#x27; !== typeof obj || Array.isArray(obj)) return false;
+  if (!obj || 'object' !== typeof obj || Array.isArray(obj)) return false;
 
   var keys = Object.keys(obj);
 
@@ -4186,15 +4179,15 @@ this.connected = 0;                         // Connection counter.
   // - (optional) set
   //
   if (
-       (&#x27;value&#x27; in obj || &#x27;writable&#x27; in obj)
-    &#x26;&#x26; (&#x27;function&#x27; === typeof obj.set || &#x27;function&#x27; === typeof obj.get)
+       ('value' in obj || 'writable' in obj)
+    &amp;&amp; ('function' === typeof obj.set || 'function' === typeof obj.get)
   ) return false;
 
-  return !!keys.length &#x26;&#x26; keys.every(function allowed(key) {
+  return !!keys.length &amp;&amp; keys.every(function allowed(key) {
     var type = description[key]
       , valid = type === undefined || is(obj[key], type);
 
-    return key in description &#x26;&#x26; valid;
+    return key in description &amp;&amp; valid;
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4227,7 +4220,7 @@ this.connected = 0;                         // Connection counter.
 
   if (context) {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.apply(collection[ i ], context);
         if (value === false) break;
       }
@@ -4239,7 +4232,7 @@ this.connected = 0;                         // Connection counter.
     }
   } else {
     if (isArray) {
-      for (; i &#x3c; length; i++) {
+      for (; i &lt; length; i++) {
         value = iterator.call(collection[i], i, collection[i]);
         if (value === false) break;
       }
@@ -4314,7 +4307,7 @@ this.connected = 0;                         // Connection counter.
         result.push(additional[index]);
       }
     });
-  } else if (&#x27;object&#x27; === typeof target) {
+  } else if ('object' === typeof target) {
     each(additional, function objectForEach(key, value) {
       if (target[key] === undefined) {
         result[key] = value;
@@ -4376,7 +4369,7 @@ this.connected = 0;                         // Connection counter.
   keep = keep || [];
 
   for (var prop in obj) {
-    if (has.call(obj, prop) &#x26;&#x26; !~keep.indexOf(prop)) {
+    if (has.call(obj, prop) &amp;&amp; !~keep.indexOf(prop)) {
       delete obj[prop];
     }
   }
@@ -4386,7 +4379,7 @@ this.connected = 0;                         // Connection counter.
     <li>example usage<pre class="apidocCodePre">...
 ```js
 // add a middleware after the first two in the stack
-primus.use(&#x27;name&#x27;, function (req, res) {
+primus.use('name', function (req, res) {
 
 }, 2);
 ```
@@ -4417,7 +4410,7 @@ file you can simply:
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function configure() {
-  var primusjs = this.pathname +&#x27;/primus.js&#x27;
+  var primusjs = this.pathname +'/primus.js'
     , primus = this
     , library
     , length;
@@ -4441,15 +4434,15 @@ file you can simply:
     length = length || library.length;
 
     res.statusCode = 200;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;text/javascript; charset=utf-8&#x27;);
-    res.setHeader(&#x27;Content-Length&#x27;, length);
+    res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+    res.setHeader('Content-Length', length);
     res.end(library);
 
     return true;
   }
 
   //
-  // We don&#x27;t serve our client-side library over HTTP upgrades.
+  // We don't serve our client-side library over HTTP upgrades.
   //
   client.upgrade = false;
 
@@ -4479,9 +4472,9 @@ file you can simply:
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -4492,7 +4485,7 @@ file you can simply:
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -4511,10 +4504,10 @@ file you can simply:
  * @returns {Object}
  * @api private
  */
-Primus.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;is&#x27;, function is(what, where) {
+Primus.<span class="apidocCodeKeywordSpan">readable</span>('is', function is(what, where) {
 var missing = Primus.parsers !== where
-    ? &#x27;transformer&#x27;
-    : &#x27;parser&#x27;
+    ? 'transformer'
+    : 'parser'
   , dependency = where[what];
 
 return {
@@ -4564,7 +4557,7 @@ return {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function configure() {
-  var specification = this.pathname +&#x27;/spec&#x27;
+  var specification = this.pathname +'/spec'
     , primus = this;
 
 <span class="apidocCodeCommentSpan">  /**
@@ -4578,14 +4571,14 @@ return {
     if (req.uri.pathname !== specification) return;
 
     res.statusCode = 200;
-    res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(primus.spec));
 
     return true;
   }
 
   //
-  // Don&#x27;t run a specification test for HTTP upgrades.
+  // Don't run a specification test for HTTP upgrades.
   //
   spec.upgrade = false;
 
@@ -4610,20 +4603,20 @@ return {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  &#x27;&#x27;
-].join(&#x27;\n&#x27;);
+  ''
+].join('\n');
 
 //
 // Replace some basic content.
 //
 client = client
-  .replace(&#x27;null; // @import {primus::pathname}&#x27;, &#x27;&#x22;&#x27;+ this.pathname.<span class="apidocCodeKeywordSpan
-">toString</span>() +&#x27;&#x22;&#x27;)
-  .replace(&#x27;null; // @import {primus::version}&#x27;, &#x27;&#x22;&#x27;+ this.version +&#x27;&#x22;&#x27;)
-  .replace(&#x27;null; // @import {primus::client}&#x27;, this.transformer.client.toString())
-  .replace(&#x27;null; // @import {primus::auth}&#x27;, (!!this.auth).toString())
-  .replace(&#x27;null; // @import {primus::encoder}&#x27;, this.encoder.toString())
-  .replace(&#x27;null; // @import {primus::decoder}&#x27;, this.decoder.toString());
+  .replace('null; // @import {primus::pathname}', '"'+ this.pathname.<span class="apidocCodeKeywordSpan
+">toString</span>() +'"')
+  .replace('null; // @import {primus::version}', '"'+ this.version +'"')
+  .replace('null; // @import {primus::client}', this.transformer.client.toString())
+  .replace('null; // @import {primus::auth}', (!!this.auth).toString())
+  .replace('null; // @import {primus::encoder}', this.encoder.toString())
+  .replace('null; // @import {primus::decoder}', this.decoder.toString());
 
 //
 ...</pre></li>
@@ -4650,9 +4643,9 @@ client = client
   //
   if (
        !predefine.descriptor(description)
-    || is(description, &#x27;object&#x27;)
-       &#x26;&#x26; !clean
-       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    || is(description, 'object')
+       &amp;&amp; !clean
+       &amp;&amp; !predefine.descriptor(predefine.mixin({}, pattern, description))
   ) { description = {
       value: description
     };
@@ -4663,7 +4656,7 @@ client = client
   // property
   //
   var described = Object.getOwnPropertyDescriptor(obj, method);
-  if (described &#x26;&#x26; !described.configurable) {
+  if (described &amp;&amp; !described.configurable) {
     return predefined;
   }
 
@@ -4694,10 +4687,10 @@ client = client
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function xss(req, res) {
-  var agent = (req.headers[&#x27;user-agent&#x27;] || &#x27;&#x27;).toLowerCase();
+  var agent = (req.headers['user-agent'] || '').toLowerCase();
 
-  if (agent &#x26;&#x26; (~agent.indexOf(&#x27;;msie&#x27;) || ~agent.indexOf(&#x27;trident/&#x27;))) {
-    setHeader(res, &#x27;X-XSS-Protection&#x27;, &#x27;0&#x27;);
+  if (agent &amp;&amp; (~agent.indexOf(';msie') || ~agent.indexOf('trident/'))) {
+    setHeader(res, 'X-XSS-Protection', '0');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4712,3 +4705,4 @@ client = client
     ]
 </div>
 </div>
+</body></html>
