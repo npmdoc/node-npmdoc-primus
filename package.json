@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "primus",
-    "description": "api documentation for [primus (v7.0.0)](http://primus.io) [![npm package](https://img.shields.io/npm/v/npmdoc-primus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-primus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-primus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-primus)",
+    "description": "#### basic api documentation for  [primus (v7.0.0)](http://primus.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-primus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-primus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-primus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-primus)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "primus": "*",

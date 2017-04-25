@@ -1,4 +1,7 @@
-# api documentation for  [primus (v7.0.0)](http://primus.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-primus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-primus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-primus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-primus)
+# npmdoc-primus
+
+#### basic api documentation for  [primus (v7.0.0)](http://primus.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-primus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-primus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-primus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-primus)
+
 #### Primus is a simple abstraction around real-time frameworks. It allows you to easily switch between different frameworks without any code changes.
 
 [![NPM](https://nodei.co/npm/primus.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/primus)
@@ -144,7 +147,8 @@
         "test": "npm run build && mocha test/*.test.js",
         "update": "find transformers -name update.sh -exec bash {} \\;"
     },
-    "version": "7.0.0"
+    "version": "7.0.0",
+    "bin": {}
 }
 ```
 
